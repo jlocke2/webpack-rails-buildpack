@@ -6,8 +6,4 @@
 #
 # `grep` will set the significant exit code accordingly.
 
-echo "webpack-rails"
-
-build_dir=$1
-
-grep 'webpack-rails' < $build_dir/Gemfile > /dev/null
+echo "webpacker-rails"
