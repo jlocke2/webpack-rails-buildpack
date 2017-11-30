@@ -32,11 +32,5 @@ export_env_dir
 
 echo "-----> gem install bundler"
 gem install bundler --no-document
-echo "-----> bundle install"
-bundle install -j4 --deployment
-echo "-----> npm install"
-npm install
-echo "-----> bundle exec rake webpack:compile"
-bundle exec rake webpack:compile --trace
-echo "-----> npm prune"
-npm prune
+echo "-----> bundle exec rake webpacker:compile"
+RAILS_ENV=production bundle exec rails webpacker:compile
